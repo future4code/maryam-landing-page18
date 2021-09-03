@@ -38,6 +38,25 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  .botao-alugar {
+    border:1px solid gray;
+    border-radius:4px;
+    display:inline-block;
+    cursor:pointer;
+    font-family:Verdana;
+    font-weight:bold;
+    font-size:13px;
+    padding:6px 10px;
+    text-decoration: none;
+  }
+
+  .botao-alugar:hover {
+    background-color: blue;
+  }
+
+
+
   .card-produto {
     display: flex;
     flex-direction: column;
@@ -65,4 +84,6 @@ footer {
     height: 60px;
     background-color: gray;
     grid-column: 1/3;
+
+
 
