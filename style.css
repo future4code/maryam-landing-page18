@@ -11,6 +11,7 @@ body {
 .icone-e-texto {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .icone {
   height: 30px;
@@ -84,6 +85,7 @@ footer {
   height: 60px;
   background-color: gray;
   grid-column: 1/3;
+  margin-top: 414px;
 /* Mobile */
 @media screen  and (min-device-width: 320px) and (max-device-width: 480px) {
 main{
