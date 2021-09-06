@@ -1,9 +1,9 @@
-* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: grey; */
 }
+
 html, body{
   height: 100%;
 }
@@ -12,22 +12,17 @@ html, body{
   display: grid;
   grid-template-rows: 60px 1fr 1fr 60px;
   grid-template-columns: 400px 1fr;
+  background-color:#FBE7C6;
+  opacity: inherit;
+  
 }
 
-.icone-e-texto {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
 
-.icone {
-  height: 30px;
-  width: 30px;
-}
+/* -----------Index---Header--------- */
 
 header {
   display: flex;
-  background-color: gray;
+  background-color: #B99095;
   justify-content: space-around;
   height: 60px;
   align-items: center;
@@ -41,10 +36,28 @@ header {
   align-items: center;
   padding: 20px;
   justify-content: center;
-
 }
+
+.icone-e-texto {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icone {
+  height: 30px;
+  width: 30px;
+}
+
+.logo{
+  height: 100px;
+  width: 100px;
+}
+
+/* -----------Index---NAV--------- */
+
 nav {
-  background-color: cadetblue;
+  background-color:#3EB2AA;
   padding: 10px;
 }
 
@@ -60,9 +73,132 @@ nav {
   border-radius: 20px;
 }
 
-.botao-nav:hover{
+.botao-nav:hover {
   background-color: rgb(117, 190, 192);
   color: white;
+}
+
+.img-nav{
+  display: flex; 
+  position: absolute;
+  align-items: center;
+  top: 90%;
+  transform: translateY(-60%); 
+  padding: 0px;
+  justify-content: center;
+  cursor: pointer;
+  margin: -20px;
+  border-radius: 50px;
+  filter: grayscale(20%);
+ }
+
+.img-nav img{
+  width: 90%; 
+}
+
+/* ---------Index-Section------------------ */
+
+main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  margin: 20px;
+}
+
+.container{
+  display: grid;
+  background-color: #FF5E5D;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 17vh 56.5vh;
+  grid-template-areas:"i T"
+                      "i t";
+  height:500px; 
+}
+
+.item1{
+  grid-area: i; 
+  align-content: end;
+}
+
+.img-item1{
+  width: 90%;
+  height: 80%;
+  margin: 6.5%;
+}
+
+.item2{
+  grid-area: T;  
+}
+
+.item2{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 90px;
+  margin-left: 10px;
+  margin-right: 30px;
+    
+}
+
+.item3{
+  grid-area: t;
+}
+
+.h3-item3{
+  font-size: 140px;
+  width: 10px;
+  padding: 100px;
+  margin-top: 90px;
+  margin-left: -40px;
+  margin-right: 30px;
+  color: white;
+ }
+
+.sessao2{
+  background-color: #DAD870;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-areas:"T T T T "
+                      "c c c c "
+                      "c c c c";
+  justify-content: center;
+  align-items: center; 
+}
+
+.titulo-sessao2{
+  grid-area: T;
+  text-align: center;
+  margin-top: -20px;
+  margin-right: 30px;  
+}
+
+.titulo-h3{
+  font-size: 40px;
+  margin-top: -20px;
+}
+
+.p-sessao2{
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.card-produto {
+  grid-template-rows: auto;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  box-shadow: 2px 2px 5px darkgray;
+  width: 300px;
+}
+
+.imagem-card {
+  width: 100%;
+}
+
+.imagem-card4{
+  width: 81%;
 }
 
 .botao-alugar {
@@ -82,25 +218,88 @@ nav {
   color: white;
 }
 
-.card-produto {
-  display: grid;
+.sessao3{
+  display:grid;
   grid-template-rows: auto;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
-  box-shadow: 2px 2px 5px darkgray;
-  width: 300px;
-}
-
-.imagem-card {
+  background-color:  #FFCD58;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:"img text3"
+                       "img buton" ;
   width: 100%;
+  height: 100%; 
 }
 
-main {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 10px;
+.img-sessao3{
+  grid-area: img;
+  align-items: center;
+  grid-template-rows: auto;
+  justify-content: space-between;
+  width: 300px;
+  height: 300px;
+  margin: 1% 0% 5% 20%;
+}
+
+.text-sessao3{
+  grid-area: text3;
+  font-size:20px;
+}
+
+.botao-sessao3{
+  grid-area: buton;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid black;
+  justify-content: center;
+  cursor: pointer;
   margin: 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(224, 73, 73);
+}
+
+.botao-sessao3:hover {
+  background-color: rgb(117, 190, 192);
+}
+
+.sessao5{
+  display:grid;
+  grid-template-rows: auto;
+  justify-content: space-between;
+  background-color:  rgb(255, 255, 255);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:"t1 t2 t3 t4" ;
+  width: 100%;
+  height: 115%; 
+}
+
+.sessao5-1{
+  grid-area: t1;
+  font-size: 20px;
+  margin: 1px 20px 20px 60px;
+}
+
+.sessao5-2{
+  grid-area: t2;
+  font-size: 20px;
+  margin: 1px 20px 20px 60px;
+}
+
+.sessao5-3{
+  grid-area: t3;
+  font-size: 20px;
+  margin: 1px 20px 20px 60px;
+}
+
+.sessao5-4{
+  grid-area: t4;
+  font-size: 20px;
+  margin: 1px 20px 20px 60px;
 }
 
 footer {
@@ -108,86 +307,82 @@ footer {
   justify-content: center;
   align-items: center;
   height: 60px;
-  background-color: gray;
+  background-color: #B99095;
   grid-column: 1/3;
-  margin-top: 414px;
+}
+
+/* -------------------Pag-Login------------ */
+
+.body-login {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(45deg, cyan, rgb(231, 94, 69));
+}
+
+.login {
+  background-color: rgba(0, 0, 0, 0.8);
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  padding: 80px;
+  border-radius: 15px;
+  color: white;
+}
+
+.input-login{
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.button-login{
+  background-color: dodgerblue;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+}
+
+.button-login:hover{
+  color: black;
+  background-color: rgb(109, 147, 185);
 }
 
 
-  .sessao1{
-    background-color: #FF5E5D;
-    width: 100%;
-    height: 400%;
-  }
+/* -----------------Agencia----------   */
 
-  .img-sessao1{
-    display: grid;
-    width: 30%;
-    height: 20%; 
-  }
-  
-  .sessao2{
-    background-color: #DAD870;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-   
-  }
-  
-  .sessao3{
-    background-color:  #FFCD58;
-    width: 100%;
-    height: 300%;
+.conf-pags{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr  ;
+  grid-template-areas:"h h h"
+                      "b m m"
+                      "f f f";                 
+}
 
-  }
+ .h-contato{
+grid-area: h;
+} 
 
-  /* -------------------Pag-Login------------ */
+.map{
+  grid-area: m;
+}
 
-  .body-login {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(45deg, cyan, yellow);
-  }
+.f-agencia{
+grid-area: f;
+} 
 
-  .login {
-    background-color: rgba(0, 0, 0, 0.8);
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    padding: 80px;
-    border-radius: 15px;
-    color: white;
-  }
+.agencia-proxima{
+  grid-area:b ;
+}
 
-  .input-login{
-    padding: 15px;
-    border: none;
-    outline: none;
-    font-size: 15px;
-  }
-
-  .button-login{
-    background-color: dodgerblue;
-    border: none;
-    padding: 15px;
-    width: 100%;
-    border-radius: 10px;
-    color: white;
-    font-size: 15px;
-  }
-
-  .button-login:hover{
-    color: black;
-    background-color: rgb(109, 147, 185);
-  }
-
-
-/* -----------------------Agencia----------   */
-
+.main-agencia{
+  width: 80%;
+  height: 80%; 
+}
 
 #agencias {
   display: flex;
@@ -201,22 +396,56 @@ footer {
   justify-content: flex-end
 }
 
+/* -------------Contato-Pag---------- */
 
-/* Mobile */
+.conf-pag-contato{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:"header header "
+                      "form form"
+                      "footer footer ";                 
+}
+
+
+.body-contato{
+  background-color: blueviolet;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 80%; 
+}
+
+.header-contato{
+  grid-area: header;
+}
+
+.footer-contato{
+  grid-area: footer;
+}
+
+.main-contato{
+  grid-area: form;
+}
+
+
+/* ------------- Mobile ----------- */
 @media screen  and (min-device-width: 320px) and (max-device-width: 480px) {
+
 main{
 display: flex;
 flex-direction: column;
 }
+
 nav{
 display: none;
 }
 
-
+/* ---------Index-Nav-------------------- */
 .icone{
-height: 15px;
-width: 20px;
-}
+  height: 15px;
+  width: 20px;
+  }
 
 }
 
